@@ -16,15 +16,15 @@
                 // this is to handle the check boxes
                 // it has same name
                 if (!$.isArray(jsonObject[item.name])) {
-                    if (value !== '' || (options.emptyToShow && value === '')) {
+                    if (value !== '' || (options.showEmpty && value === '')) {
                         jsonObject[item.name] = [jsonObject[item.name]];
                     }
                 }
-                if (value !== '' || (options.emptyToShow && value === '')) {
+                if (value !== '' || (options.showEmpty && value === '')) {
                     jsonObject[item.name].push(value);
                 }
             } else {
-                if (value !== '' || (options.emptyToShow && value === '')) {
+                if (value !== '' || (options.showEmpty && value === '')) {
                     jsonObject[item.name] = value;
                 }
             }
@@ -34,7 +34,7 @@
 
     // Static method default options.
     $.fn.formserializer.options = {
-        emptyToShow: true
+        showEmpty: true
     };
 
 }(jQuery));

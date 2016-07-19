@@ -15,16 +15,25 @@ In your web page:
 <script src="dist/formserializer.min.js"></script>
 <script>
 jQuery(function($) {
-  $.formserializer(); // "awesome"
+  $('#element').formserializer(); // {}
 });
 </script>
 ```
 
 ## Documentation
-_(Coming soon)_
+This is just a simple plugin which convert the form element in to JSON object by name
+
 
 ## Examples
-_(Coming soon)_
+
+Usage is very simple have to create a form element with the name attribute
+it converts all the element with the name tag to key value pair
+
+```javascript
+  $('#element').formserializer(); // {}
+```
+If you wants only the no empty field then you can pass the additional option here
+{ showEmpty : false }
 
 ## Release History
-_(Nothing yet)_
+ version 0.1.0 is released
