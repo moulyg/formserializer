@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+
+    <script src="../libs/jquery/jquery.js"></script>
+    <script src="../dist/jquery.formserializer.js"></script>
+</head>
+<body>
+<script>
+
+    $(function () {
+        $('#submit1').click(function (e) {
+            e.preventDefault();
+            $('#result').text(JSON.stringify($('form').formserializer()));
+            return false;
+        });
+
+        $('#submit2').click(function (e) {
+            e.preventDefault();
+            $('#result').text(JSON.stringify($('form').formserializer({emptyToShow: false})));
+            return false;
+        });
+    });
+</script>
+
+
+<h2>Form</h2>
+
+<form action="" method="post">
+    First Name:<input type="text" name="firstname" maxlength="12" size="12"/>
+    <hr/>
+    Last Name:<input type="text" name="lastname" maxlength="36" size="12"/>
+    <hr/>
+    Gender:<br/>
+    Male:<input type="radio" name="gender" value="Male"/>
+    <br/>
+    Female:<input type="radio" name="gender" value="Female"/>
+    <hr/>
+    Favorite Color:<br/>
+    Red:<input type="checkbox" name="colors" value="Red"/>
+    <br/>
+    Green:<input type="checkbox" name="colors" value="Green"/>
+    <br/>
+    Blue:<input type="checkbox" name="colors" value="Blue"/>
+    <hr/>
+    <textarea cols="20" name="description" rows="5"></textarea>
+    <hr/>
+    Select a month:<br/>
+    <select name="month">
+        <option value=""></option>
+        <option value="January">January</option>
+        <option value="February">February</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option>
+    </select>
+    <hr/>
+    Select a months:<br/>
+    <select name="months" multiple="multiple">
+        <option value="January">January</option>
+        <option value="February">February</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option>
+    </select>
+    <hr/>
+    <input id="submit1" type="submit" value="With Empty Fields"/>
+    <input id="submit2" type="submit" value="Without Empty Fields"/>
+</form>
+<h2>JSON Output</h2>
+
+<div id="result">
+</div>
+</body>
+</html>

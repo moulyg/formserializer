@@ -1,11 +1,6 @@
-/*
- * formserializer
- * https://github.com/moulyg/formserializer
- *
- * Copyright (c) 2016 moulyg@gmail.com
- * Licensed under the MIT license.
- */
-
+/*! Form Serializer - v0.1.0 - 2016-07-19
+* https://github.com/moulyg/formserializer
+* Copyright (c) 2016 moulyg@gmail.com; Licensed MIT */
 (function ($) {
 
     // Static method.
